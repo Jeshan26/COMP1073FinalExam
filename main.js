@@ -4,7 +4,9 @@
 // let url = 'https://jessicagilfillan.github.io/Final_Exam_Prep/Q3/cats.json';
 
 
+
 let url = 'https://jeshan26.github.io/COMP1073FinalExam/cats.json';
+
 
 //  this is the fetchh api using promises to fetch the data of the json from server 
 fetch(url)
@@ -12,9 +14,10 @@ fetch(url)
         return response.json();
     })
     .then(function(jsonObj) {
-        
-
+        let button= document.getElementById("btn");
         let cats = jsonObj.cats;
+        button.addEventListener('click', function(e){
+        
         let section = document.querySelector("section");
 
         for (let i = 0; i < cats.length; i++) {
@@ -28,9 +31,9 @@ fetch(url)
             let p2 = document.createElement("p2");
             let ul = document.createElement("ul");
             // img element is being created for every image of car by passing the actaul source of the image
-            image.setAttribute('src',cats[i].image);
+            image.setAttribute('src',cats[i].photo);
 
-            image.setAttribute('alt', cats[i].image);
+            image.setAttribute('alt',cats[i].photo);
 
 
             
@@ -59,6 +62,6 @@ fetch(url)
         }
     })
     // this catches any error if occured while loading the url 
-    .catch(function(e){
-        alert("Error " + e.message);
-    });
+    
+
+})
