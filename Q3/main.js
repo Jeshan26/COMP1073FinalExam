@@ -5,7 +5,7 @@
 
 
 
-let url = 'https://jeshan26.github.io/COMP1073FinalExam/cats.json';
+let url = 'https://jeshan26.github.io/COMP1073FinalExam/Q3/cats.json';
 
 
 //  this is the fetchh api using promises to fetch the data of the json from server 
