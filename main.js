@@ -39,7 +39,7 @@ fetch(url)
             
             // image=cats[i].photo; 
             console.log(image);
-            h2.textContent = 'Name'+cats[i].name;
+            h2.textContent = 'Name :'+cats[i].name;
             p1.textContent = 'Species :' + cats[i].species + '\n';
             p2.textContent = '\n Age :' + cats[i].age;
             let favFoods = cats[i].favFoods;
